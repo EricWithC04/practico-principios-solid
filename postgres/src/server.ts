@@ -3,6 +3,7 @@ import morgan from "morgan"
 import cors from "cors"
 import helmet from "helmet"
 import { PORT } from "./environments/environments"
+import { connectDB } from "./config/connectDB"
 
 class Server {
     private app: Application
@@ -16,8 +17,8 @@ class Server {
         this.routes()
     }
 
-    public connectDB() {
-
+    public async connectDB() {
+        await connectDB()
     }
 
     public middlewares() {

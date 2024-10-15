@@ -7,6 +7,6 @@ export const DB = {
     port: process.env.DB_PORT!,
     user: process.env.DB_USER!,
     password: process.env.DB_PASSWORD!,
-    database: process.env.DB!,
+    name: process.env.DB_NAME!,
     dialect: process.env.DB_DIALECT as Dialect
 }
